@@ -37,20 +37,18 @@
             <!-- Stock Price Fetcher -->
             <div class="bg-slate-700/50 rounded-xl p-4 sm:p-6 mb-6 w-full">
                 <label class="block text-sm font-medium text-slate-300 mb-2">Ticker Symbol</label>
-                <div class="flex flex-col sm:flex-row gap-3 w-full">
-                    <input
-                        type="text"
-                        id="ticker"
-                        placeholder="e.g., AAPL"
-                        class="w-full bg-slate-600 border border-slate-500 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 uppercase"
-                    />
-                    <button
-                        id="fetchBtn"
-                        class="w-full sm:w-auto sm:min-w-[120px] bg-blue-600 hover:bg-blue-700 disabled:bg-slate-600 text-white px-4 sm:px-6 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
-                    >
-                        Get Price
-                    </button>
-                </div>
+                <input
+                    type="text"
+                    id="ticker"
+                    placeholder="e.g., AAPL"
+                    class="w-full bg-slate-600 border border-slate-500 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 uppercase mb-3"
+                />
+                <button
+                    id="fetchBtn"
+                    class="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-slate-600 text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                >
+                    Get Price
+                </button>
                 <div id="priceDisplay" class="mt-4 hidden items-center gap-2 text-green-400">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
