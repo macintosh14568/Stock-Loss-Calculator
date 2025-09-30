@@ -9,11 +9,18 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
     </style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4 sm:p-8">
-    <div class="max-w-4xl mx-auto">
-        <div class="bg-slate-800 rounded-2xl shadow-2xl border border-slate-700 p-4 sm:p-8">
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4 sm:p-8 overflow-x-hidden">
+    <div class="max-w-4xl mx-auto w-full">
+        <div class="bg-slate-800 rounded-2xl shadow-2xl border border-slate-700 p-4 sm:p-8 w-full overflow-hidden">
             <!-- Header -->
             <div class="flex items-center gap-3 mb-8">
                 <div class="bg-red-500/20 p-3 rounded-lg">
@@ -28,9 +35,9 @@
             </div>
 
             <!-- Stock Price Fetcher -->
-            <div class="bg-slate-700/50 rounded-xl p-4 sm:p-6 mb-6">
+            <div class="bg-slate-700/50 rounded-xl p-4 sm:p-6 mb-6 w-full">
                 <label class="block text-sm font-medium text-slate-300 mb-2">Ticker Symbol</label>
-                <div class="flex flex-col sm:flex-row gap-3">
+                <div class="flex flex-col sm:flex-row gap-3 w-full">
                     <input
                         type="text"
                         id="ticker"
@@ -39,7 +46,7 @@
                     />
                     <button
                         id="fetchBtn"
-                        class="w-full sm:w-auto sm:min-w-[120px] bg-blue-600 hover:bg-blue-700 disabled:bg-slate-600 text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
+                        class="w-full sm:w-auto sm:min-w-[120px] bg-blue-600 hover:bg-blue-700 disabled:bg-slate-600 text-white px-4 sm:px-6 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
                     >
                         Get Price
                     </button>
