@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Robinhood Loss Calculator",
+  "version": "1.0.0",
+  "description": "Calculate how many shares to buy to reach your target loss percentage on Robinhood",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://robinhood.com/*", "https://*.robinhood.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://robinhood.com/*",
+    "https://*.robinhood.com/*"
+  ]
+}
